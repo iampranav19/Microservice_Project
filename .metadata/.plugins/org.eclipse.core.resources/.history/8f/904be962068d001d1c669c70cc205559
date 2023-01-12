@@ -1,0 +1,22 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: ORDER-Service
+        uri: lb://ORDER-Service
+        predicates:
+          - Path=/order/**
+      - id: Product-Service
+        uri: lb://Product-Service
+        predicates:
+          - Path=/product/**
+  config:
+    import: configserver:http://root:s3cr3t@localhost:9296  
+       import-check:
+          enabled: false    
+  

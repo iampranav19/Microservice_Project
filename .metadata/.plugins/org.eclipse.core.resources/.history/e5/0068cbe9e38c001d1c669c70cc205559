@@ -1,0 +1,30 @@
+package com.pranav.service;
+
+import java.time.Instant;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
+
+import com.pranav.entity.TransactionDetails;
+import com.pranav.model.PaymentRequest;
+import com.pranav.repo.PaymentRepo;
+
+@Service
+public class PaymentServiceImpl implements PaymentService {
+
+	@Autowired
+	PaymentRepo repo;
+	@Override
+	public long doPayment(PaymentRequest paymentRequest) {
+		// TODO Auto-generated method stub
+		TransactionDetails td=new TransactionDetails();
+		td.setAmount(paymentRequest.getAmount());
+		td.setOrderId(paymentRequest.getOrderId());
+		td.setPaymentDate(Instant.now());
+		td.setPaymentMode(paymentRequest.getPaymentMode());
+		
+		return 0;
+	}
+
+}

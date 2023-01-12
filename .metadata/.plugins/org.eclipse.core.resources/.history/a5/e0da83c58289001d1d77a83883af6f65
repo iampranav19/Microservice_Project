@@ -1,0 +1,16 @@
+package com.pranav.service;
+
+import org.springframework.stereotype.Service;
+
+import com.pranav.model.ProductRequest;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Override
+	public long addProduct(ProductRequest productRequest) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

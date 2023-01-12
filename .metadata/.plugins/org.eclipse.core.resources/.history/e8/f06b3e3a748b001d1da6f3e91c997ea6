@@ -1,0 +1,22 @@
+package com.pranav.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.pranav.model.OrderRequest;
+import com.pranav.repo.OrderRepo;
+
+public class OrderServiceImpl implements OrderService {
+
+	@Autowired
+	private OrderRepo orderRepo;
+	
+	@Override
+	public long placeOrder(OrderRequest orderRequest) {
+		// Order Entity -> Save the data with Status Order Created.
+		System.out.println("++++++++ Placing Order:: "+orderRequest);
+		// Product Service -> Block Product (Reduce Quantity)
+		// Payment Service --> Payment --> Success (Complete) else -> Cancelled
+		return 0;
+	}
+
+}

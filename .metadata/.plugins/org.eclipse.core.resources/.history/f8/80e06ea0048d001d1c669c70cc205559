@@ -1,0 +1,9 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: API-GATEWAY
+  config:
+    import: optional:configserver:http://root:s3cr3t@localhost:9296
+    

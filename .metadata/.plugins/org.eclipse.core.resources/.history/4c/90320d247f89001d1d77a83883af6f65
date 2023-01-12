@@ -1,0 +1,11 @@
+package com.pranav.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.pranav.entities.Product;
+
+@Repository
+public interface ProductService extends JpaRepository<Product, Long> {
+
+}

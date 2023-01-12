@@ -1,0 +1,9 @@
+package com.pranav.external.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name = "Product-Service/product")
+public interface ProductService {
+
+	
+}

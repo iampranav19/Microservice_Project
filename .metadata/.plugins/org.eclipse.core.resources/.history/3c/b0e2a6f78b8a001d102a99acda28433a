@@ -1,0 +1,6 @@
+package com.pranav.model;
+
+public class ProductResponse {
+
+	
+}

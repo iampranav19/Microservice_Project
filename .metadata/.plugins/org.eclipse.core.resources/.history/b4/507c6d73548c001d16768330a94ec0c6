@@ -1,0 +1,5 @@
+package com.pranav.external.client;
+
+public class CustomErrorDecoder {
+
+}

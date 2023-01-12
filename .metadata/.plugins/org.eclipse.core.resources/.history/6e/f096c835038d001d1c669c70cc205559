@@ -1,0 +1,6 @@
+server.port=9090
+spring.application.name=API-Gateway
+spring.config.import=optional:configserver:http://root:s3cr3t@localhost:9296
+
+#Spring Cloud API Gateway
+spring.cloud.gateway.routes=

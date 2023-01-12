@@ -1,0 +1,9 @@
+package com.pranav.repo;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.pranav.entity.TransactionDetails;
+
+public interface PaymentRepo extends JpaRepository<TransactionDetails, Long> {
+
+}

@@ -1,0 +1,32 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: ORDER-Service
+        uri: lb://ORDER-Service
+        predicates:
+          - Path=/order/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: ORDER-Service
+            fallbackuri: forward:/orderServiceFallback
+      - id: Product-Service
+        uri: lb://Product-Service
+        predicates:
+          - Path=/product/**
+        filters:
+        - name: CircuitBreaker
+          args:
+            name: ORDER-Service
+            fallbackuri: forward:/orderServiceFallback
+  config:
+    import: configserver:http://root:s3cr3t@localhost:9296  
+    import-check:
+          enabled: false    
+  

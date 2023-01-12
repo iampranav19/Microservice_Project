@@ -1,0 +1,5 @@
+package com.pranav.entities;
+
+public class Order {
+
+}

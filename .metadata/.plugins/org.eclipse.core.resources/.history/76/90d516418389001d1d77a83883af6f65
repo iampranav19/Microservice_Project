@@ -1,0 +1,28 @@
+package com.pranav.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.pranav.entities.Product;
+import com.pranav.model.ProductRequest;
+import com.pranav.repositories.ProductRepository;
+
+import lombok.extern.log4j.Log4j;
+
+@Service
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+	private ProductRepository productRepository;
+	
+	@Override
+	public long addProduct(ProductRequest productRequest) {
+		System.out.println(" +++++++++ Adding Product ++++++++++++");
+		Product product= new Product(productRequest.getName(), productRequest.getQuantity(),productRequest.getPrice());
+		
+		Product savedProduct = productRepository.save(product);
+		System.out.println("++++++++ Product Created +++++++++++=");
+		return savedProduct.getProductId();
+	}
+
+}

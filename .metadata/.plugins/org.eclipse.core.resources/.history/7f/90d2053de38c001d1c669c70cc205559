@@ -1,0 +1,9 @@
+package com.pranav.service;
+
+import com.pranav.model.PaymentRequest;
+
+public interface PaymentService {
+
+	void doPayment(PaymentRequest paymentRequest);
+
+}

@@ -1,0 +1,13 @@
+package com.pranav.service;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.pranav.model.OrderRequest;
+
+public interface OrderService 
+{
+
+	long placeOrder(OrderRequest orderRequest);
+
+	
+}
