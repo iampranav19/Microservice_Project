@@ -1,3 +1,4 @@
 This is the complete Microvice project.
 - Following Model Architecture.
-![image](https://user-images.githubusercontent.com/46451477/212090289-b9c141b0-3efe-42bc-bba7-d93977e5d90d.png)
+<img width="340" alt="image" src="https://user-images.githubusercontent.com/46451477/212091407-b279aa7c-3ed0-4c54-9241-7fc2d435117d.png">
+
